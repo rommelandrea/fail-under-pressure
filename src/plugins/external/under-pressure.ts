@@ -34,7 +34,7 @@ import fp from 'fastify-plugin';
 // };
 /* end fail code */
 
-// export default fastifyUnderPressure;
+/* start pass code */
 export default fp(async (fastify, opts) => {
   const healthCheck = opts;
 
@@ -67,3 +67,4 @@ export default fp(async (fastify, opts) => {
     },
   });
 });
+/* end pass code */
