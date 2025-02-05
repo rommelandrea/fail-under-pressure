@@ -3,19 +3,19 @@ import { defaultExclude, defineConfig } from "vitest/config";
 export default defineConfig({
   test: {
     reporters: "default",
-    // coverage: {
-    //   reporter: ["text"],
-    //   provider: "v8",
-    //   exclude: [
-    //     ...defaultExclude,
-    //     "src/test/**/*",
-    //     ".**/**/*.js",
-    //     ".**/**/*.ts",
-    //     "perf/**/*.js",
-    //     "src/migrations/**/*.ts",
-    //     "src/migrations/**/*.js",
-    //   ],
-    // },
+    coverage: {
+      reporter: ["text"],
+      provider: "v8",
+      exclude: [
+        ...defaultExclude,
+        "src/test/**/*",
+        ".**/**/*.js",
+        ".**/**/*.ts",
+        "perf/**/*.js",
+        "src/migrations/**/*.ts",
+        "src/migrations/**/*.js",
+      ],
+    },
     include: [
       "./src/@(test?(s)|__test?(s)__)/**/*.test.@(js|cjs|mjs|tap|cts|jsx|mts|ts|tsx)",
       //"./src/test/services/jobs/job-service.test.ts"
