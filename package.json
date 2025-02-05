@@ -1,0 +1,31 @@
+{
+  "name": "fastify-fail-metrics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS='--import tsx' vitest run --reporter junit --reporter default --coverage --outputFile=results.xml",
+    "dev": "FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --watch --import tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.14.1+sha512.7f1de9cffea40ff4594c48a94776112a0db325e81fb18a9400362ff7b7247f4fbd76c3011611c9f8ac58743c3dc526017894e07948de9b72052f874ee2edfdcd",
+  "dependencies": {
+    "@fastify/autoload": "^6.1.0",
+    "@fastify/type-provider-typebox": "^5.1.0",
+    "@fastify/under-pressure": "^9.0.3",
+    "fastify": "^5.2.1",
+    "fastify-metrics": "^12.1.0",
+    "fastify-plugin": "^5.0.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.1",
+    "@vitest/coverage-v8": "3.0.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
