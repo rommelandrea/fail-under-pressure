@@ -36,8 +36,6 @@ import fp from 'fastify-plugin';
 
 /* start pass code */
 export default fp(async (fastify, opts) => {
-  const healthCheck = opts;
-
   fastify.register(fastifyUnderPressure, {
     maxEventLoopDelay: 1000,
     maxHeapUsedBytes: v8.getHeapStatistics().heap_size_limit,
